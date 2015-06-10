@@ -1,5 +1,5 @@
 //
-//  GDSMSSplitter.h
+//  GDSMSCounterLabel.h
 //
 //  Copyright (c) 2015 A. Gordiyenko. All rights reserved.
 //
@@ -28,30 +28,14 @@
  SOFTWARE.
  */
 
-//
-// Inspired by https://github.com/Codesleuth/split-sms by David Wood.
-//
+#import <UIKit/UIKit.h>
 
-#import <Foundation/Foundation.h>
+#define GD_SMS_COUNTER_SHOW_DEBUGTIME 1
 
-extern NSString * const kGDSMSSplitterResultKeyParts;
-extern NSString * const kGDSMSSplitterResultKeyTotalLength;
-extern NSString * const kGDSMSSplitterResultKeyTotalBytes;
-extern NSString * const kGDSMSSplitterResultKeyMessageMode;
-extern NSString * const kGDSMSSplitterResultKeyLeftoverLength;
+IB_DESIGNABLE
 
-extern NSString * const kGDSMSSplitterPartKeyContent;
-extern NSString * const kGDSMSSplitterPartKeyLength;
-extern NSString * const kGDSMSSplitterPartKeyBytes;
+@interface GDSMSCounterLabel : UILabel
 
-typedef NS_ENUM(NSUInteger, GDSMSSplitterMessageMode) {
-    GDSMSSplitterMessageModeGSM0338,
-    GDSMSSplitterMessageModeUTF16
-};
-
-@interface GDSMSSplitter : NSObject
-
-- (NSDictionary *)split:(NSString *)messageString includeContents:(BOOL)includeContents;
-+ (instancetype)sharedSplitter;
+- (void)countForText:(NSString *)text;
 
 @end
