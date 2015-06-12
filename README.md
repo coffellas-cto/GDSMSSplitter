@@ -3,4 +3,6 @@ This repository contains two Objective-C classes designed to split a string into
 
 `GDSMSSplitter` provides support for *GSM 03.38* standard (including *basic character set extension table*, but excluding *national language shift tables*). It also supports *UTF-16* (*UCS-2*) encoding standard.
 
+[Wikipedia article on GSM 03.38](http://en.wikipedia.org/wiki/GSM_03.38)
+
 # GDSMSSplitter
