@@ -242,14 +242,15 @@ NSString * const kGDSMSSplitterGSMCharsExString = @"\f|^€{}[~]\\";
     [messageString getCharacters:message range:NSMakeRange(0, messageLength)];
     
     for (NSUInteger i = 0; i < messageLength; i++) {
-        unichar c = message[i];
-        if (c >= 0xD800 && c <= 0xDBFF) { // High surrogate
-            if (curMessageBytes == 132)
-                split(i - 1);
-            
-            curMessageBytes += 2;
-            curMessageLength++;
-        }
+        // TODO: Check high surrogates detection. Now Emoji icons fall into this category, though actually they are sent as 2 bytes.
+//        unichar c = message[i];
+//        if (c >= 0xD800 && c <= 0xDBFF) { // High surrogate
+//            if (curMessageBytes == 132)
+//                split(i - 1);
+//            
+//            curMessageBytes += 2;
+//            curMessageLength++;
+//        }
         
         curMessageBytes += 2;
         curMessageLength++;
