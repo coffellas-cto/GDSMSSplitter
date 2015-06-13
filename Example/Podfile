@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'GDSMSSplitter_Example', :exclusive => true do
+  pod "GDSMSSplitter", :path => "../"
+end
+
+target 'GDSMSSplitter_Tests', :exclusive => true do
+  pod "GDSMSSplitter", :path => "../"
+
+  
+end
