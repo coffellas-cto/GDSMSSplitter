@@ -1,4 +1,6 @@
 ##About
+![screen_record2015-06-13_20_53_45](https://cloud.githubusercontent.com/assets/3193877/8145397/52ab127e-120f-11e5-8994-36d267d44950.gif) ![screen_record2015-06-13_21_06_02](https://cloud.githubusercontent.com/assets/3193877/8145421/6f418b9c-1210-11e5-9c40-280b3651cef3.gif)
+
 This repository contains two Objective-C classes designed to split a string into a sequence of short messages close to the international standard of SMS messaging. The `GDSMSSplitter` class is responsible for actuall splitting. `GDSMSCounterLabel` is a `UILabel` subclass which implements the basic pattern for showing a user the number of SMS-messages potentially sent to recipient and the count of leftover symbols.
 
 `GDSMSSplitter` provides support for *GSM 03.38* standard (including *basic character set extension table*, but excluding *national language shift tables*). It also supports *UTF-16* (*UCS-2*) encoding standard.
