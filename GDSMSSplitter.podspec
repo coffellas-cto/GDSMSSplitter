@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "GDSMSSplitter"
-  s.version          = "0.1.0"
+  s.version          = "0.1.2"
   s.summary          = "Objective-C classes designed to split a string into a sequence of short messages close to the international standard of SMS messaging."
   s.description      = <<-DESC
 The `GDSMSSplitter` class is responsible for actuall splitting. `GDSMSCounterLabel` is a `UILabel` subclass which implements the basic pattern for showing a user the number of SMS-messages potentially sent to recipient and the count of leftover symbols.
