@@ -128,8 +128,6 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "GDSMSSplitter"
 ```
- 
- To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Author
 
