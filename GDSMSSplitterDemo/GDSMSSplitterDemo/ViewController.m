@@ -28,13 +28,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.counterLabel countForText:@""];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    [self.counterLabel countForText:@""];    
     [self.textView becomeFirstResponder];
 }
 
