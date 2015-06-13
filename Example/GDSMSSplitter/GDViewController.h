@@ -1,13 +1,15 @@
 //
-//  GDViewController.h
-//  GDSMSSplitter
+//  ViewController.h
+//  GDSMSSplitterDemo
 //
-//  Created by coffellas-cto on 06/13/2015.
-//  Copyright (c) 2014 coffellas-cto. All rights reserved.
+//  Created by Alex G on 13.06.15.
+//  Copyright (c) 2015 Alexey Gordiyenko. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface GDViewController : UIViewController
 
+
 @end
+

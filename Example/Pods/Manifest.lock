@@ -1,0 +1,14 @@
+PODS:
+  - GDSMSSplitter (0.1.0)
+
+DEPENDENCIES:
+  - GDSMSSplitter (from `../`)
+
+EXTERNAL SOURCES:
+  GDSMSSplitter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GDSMSSplitter: a81ad51cad137051a3f109973168df24a9b16f74
+
+COCOAPODS: 0.37.2

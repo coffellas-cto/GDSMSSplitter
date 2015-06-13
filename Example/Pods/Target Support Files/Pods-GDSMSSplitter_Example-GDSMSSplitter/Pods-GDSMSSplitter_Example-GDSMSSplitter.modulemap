@@ -1,0 +1,6 @@
+framework module GDSMSSplitter {
+  umbrella header "Pods-GDSMSSplitter_Example-GDSMSSplitter-umbrella.h"
+
+  export *
+  module * { export * }
+}

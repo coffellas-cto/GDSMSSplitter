@@ -14,3 +14,5 @@
     @import UIKit;
     @import Foundation;
 #endif
+
+#define GD_SMS_COUNTER_SHOW_DEBUGTIME 1

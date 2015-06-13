@@ -1,30 +1,21 @@
-#
-# Be sure to run `pod lib lint GDSMSSplitter.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# Any lines starting with a # are optional, but encouraged
-#
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = "GDSMSSplitter"
   s.version          = "0.1.0"
-  s.summary          = "A short description of GDSMSSplitter."
+  s.summary          = "Objective-C classes designed to split a string into a sequence of short messages close to the international standard of SMS messaging."
   s.description      = <<-DESC
-                       An optional longer description of GDSMSSplitter
+The `GDSMSSplitter` class is responsible for actuall splitting. `GDSMSCounterLabel` is a `UILabel` subclass which implements the basic pattern for showing a user the number of SMS-messages potentially sent to recipient and the count of leftover symbols.
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+`GDSMSSplitter` provides support for **GSM 03.38** standard (including **basic character set extension table**, but *excluding* **national language shift tables**). It also supports **UTF-16** (*UCS-2*) encoding standard.
+
+[Wikipedia article on GSM 03.38](http://en.wikipedia.org/wiki/GSM_03.38)
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/GDSMSSplitter"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/coffellas-cto/GDSMSSplitter"
+  s.screenshots     = "https://cloud.githubusercontent.com/assets/3193877/8145397/52ab127e-120f-11e5-8994-36d267d44950.gif", "https://cloud.githubusercontent.com/assets/3193877/8145421/6f418b9c-1210-11e5-9c40-280b3651cef3.gif"
   s.license          = 'MIT'
-  s.author           = { "coffellas-cto" => "cto@coffellas.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/GDSMSSplitter.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { "Alex Gordiyenko" => "cto@coffellas.com" }
+  s.source           = { :git => "https://github.com/coffellas-cto/GDSMSSplitter.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '6.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
@@ -32,7 +23,5 @@ Pod::Spec.new do |s|
     'GDSMSSplitter' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.public_header_files = 'Pod/Classes/**/*.h'
 end
