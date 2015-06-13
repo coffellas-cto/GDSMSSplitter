@@ -3,9 +3,39 @@
 
 This repository contains two Objective-C classes designed to split a string into a sequence of short messages close to the international standard of SMS messaging. The `GDSMSSplitter` class is responsible for actuall splitting. `GDSMSCounterLabel` is a `UILabel` subclass which implements the basic pattern for showing a user the number of SMS-messages potentially sent to recipient and the count of leftover symbols.
 
-`GDSMSSplitter` provides support for *GSM 03.38* standard (including *basic character set extension table*, but excluding *national language shift tables*). It also supports *UTF-16* (*UCS-2*) encoding standard.
+You can check `GDSMSSplitterDemo` project to see how it's used (it's really straightforward).
+
+`GDSMSSplitter` provides support for **GSM 03.38** standard (including **basic character set extension table**, but *excluding* **national language shift tables**). It also supports **UTF-16** (*UCS-2*) encoding standard.
 
 [Wikipedia article on GSM 03.38](http://en.wikipedia.org/wiki/GSM_03.38)
+
+Your comments and smart pull requests are welcome.
+
+# GDSMSCounterLabel
+
+ A `UILabel` subclass used to to represent the number of messages and symbols left. This class uses `GDSMSSplitter` class under the hood. The `setText:` setter for this class is overriden and does nothing.
+ 
+ To see the time spent for each text processing operation in your debug output add the following line to your prefix header:
+```objective-c
+#define GD_SMS_COUNTER_SHOW_DEBUGTIME 1
+```
+ Minimum platforms versions: iOS 6.
+ 
+##Methods
+ 
+```objective-c
+- (void)countForText:(NSString *)text;
+```
+
+**Description**
+
+Processes the input string and changes the `text` property of the label to represent the number of messages and symbols left.
+
+After a call to this method the label's text shows the counting information in X/Y format, where X is the number of potential SMS messages to be sent and Y is the number of symbols left in the last message in the sequence.
+
+**Parameters**
+
+`text` - A string to be processed.
 
 # GDSMSSplitter
 Class used to split a string into a sequence of short messages (parts) close to the international standard of SMS messaging.
