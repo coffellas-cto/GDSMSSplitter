@@ -1,4 +1,4 @@
-##About
+## About
 [![CI Status](http://img.shields.io/travis/coffellas-cto/GDSMSSplitter.svg?style=flat)](https://travis-ci.org/coffellas-cto/GDSMSSplitter)
 [![Version](https://img.shields.io/cocoapods/v/GDSMSSplitter.svg?style=flat)](http://cocoapods.org/pods/GDSMSSplitter)
 [![License](https://img.shields.io/cocoapods/l/GDSMSSplitter.svg?style=flat)](http://cocoapods.org/pods/GDSMSSplitter)
@@ -26,7 +26,7 @@ Your comments and smart pull requests are welcome.
 ```
  Minimum platforms versions: iOS 6.
  
-##Methods
+## Methods
  
 ```objective-c
 - (void)countForText:(NSString *)text;
@@ -49,7 +49,7 @@ You can instantiate a new instance of this class or use a singleton accessor met
 
 Minimum platforms versions: iOS 6, MacOS X 10.6.
 
-##Methods
+## Methods
 ```objective-c
 - (NSDictionary *)split:(NSString *)messageString includeContents:(BOOL)includeContents;
 ```
@@ -106,7 +106,7 @@ Every element of the array value of the `kGDSMSSplitterResultKeyParts` key is it
 
 Returns a singleton splitter object. On the first call this method creates a newly allocated and instantiated splitter object. On any of subsequent calls it returns the previously created object.
 
-##Additional type
+## Additional type
 ```objective-c
 typedef NS_ENUM(NSUInteger, GDSMSSplitterMessageMode) {
     GDSMSSplitterMessageModeGSM0338,
